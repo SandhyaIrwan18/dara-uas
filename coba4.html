@@ -1,0 +1,61 @@
+<html>
+    <head>
+        <title>Website Penjualan</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+        <link rel="stylesheet" href="coba1.css">
+    </head>
+    <body>
+        <header>
+            <table width="100%" height="200" background="bg.jpg">
+                <tr>
+                 <td align="center" valign="middle">
+                   <h1 style="color: #DEB887;" align="center">A HOUSEFUL OF STORIES</h1>
+                 </td>
+                </tr>
+            </table>
+        </header>
+
+        <menu>
+            <input type="checkbox" name="" id="toggler">
+            <label for="toggler" class="fas fa-bars"></label>
+
+            <a href="#" class="logo">Book Store<span>.</span></span></a>
+            
+            <nav class="navbar">
+                <a href="coba.html">Home</a>
+                <a href="coba2.html">Product</a>
+                <a href="coba3.html">Payment</a>
+                <a href="coba4.html">Invoice</a>
+                <a href="coba1.html">Contact</a>
+            </nav>
+            <div class="icons">
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-shopping-cart"></a>
+                <a href="#" class="fas fa-user"></a>
+            </div>
+        </menu>
+
+        <section class="invoice">
+            <div class="container">
+                <h1>Invoice Pembayaran</h1>
+                <p>Terima kasih atas pembelian Anda!</p>
+                <p>Nama: <span id="customer-name"></span></p>
+                <p>Email: <span id="customer-email"></span></p>
+                <p>Alamat: <span id="customer-address"></span></p>
+                <p>Nomor Kartu Kredit: <span id="customer-card"></span></p>
+            </div>
+        
+            <script>
+                const urlParams = new URLSearchParams(window.location.search);
+                
+                document.getElementById('customer-name').innerText = urlParams.get('name');
+                document.getElementById('customer-email').innerText = urlParams.get('email');
+                document.getElementById('customer-address').innerText = urlParams.get('address');
+                document.getElementById('customer-card').innerText = urlParams.get('card');
+            </script>
+        </section>
+    <footer >
+        <p>&copy; 2024 Website A HOUSEFUL OF STORIES. All rights reserved.</p>
+    </footer>
+    </body>
+</html>
